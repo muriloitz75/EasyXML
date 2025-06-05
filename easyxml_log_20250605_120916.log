@@ -1,0 +1,31 @@
+2025-06-05 12:09:16,919 - INFO - Módulo EasyXML importado com sucesso
+2025-06-05 12:09:20,758 - INFO - Iniciando processamento de notas fiscais XML
+2025-06-05 12:09:20,759 - INFO - Iniciando processamento do arquivo 102505_01012022_31032025.XML
+2025-06-05 12:09:20,759 - INFO - Arquivo 102505_01012022_31032025.XML aberto, iniciando parse XML
+2025-06-05 12:09:22,899 - INFO - Parse XML concluído para 102505_01012022_31032025.XML
+2025-06-05 12:09:22,899 - INFO - Arquivo 102505_01012022_31032025.XML é uma NFSe de Serviço Prestado
+2025-06-05 12:09:22,900 - INFO - Arquivo 102505_01012022_31032025.XML contém 9884 notas fiscais
+2025-06-05 12:09:22,904 - INFO - Processadas 500 de 9884 notas (5.1%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,908 - INFO - Processadas 1000 de 9884 notas (10.1%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,911 - INFO - Processadas 1500 de 9884 notas (15.2%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,914 - INFO - Processadas 2000 de 9884 notas (20.2%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,919 - INFO - Processadas 2500 de 9884 notas (25.3%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,923 - INFO - Processadas 3000 de 9884 notas (30.4%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,927 - INFO - Processadas 3500 de 9884 notas (35.4%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,930 - INFO - Processadas 4000 de 9884 notas (40.5%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,935 - INFO - Processadas 4500 de 9884 notas (45.5%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,938 - INFO - Processadas 5000 de 9884 notas (50.6%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,942 - INFO - Processadas 5500 de 9884 notas (55.6%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,945 - INFO - Processadas 6000 de 9884 notas (60.7%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,950 - INFO - Processadas 6500 de 9884 notas (65.8%) - Tempo decorrido: 0.0s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,953 - INFO - Processadas 7000 de 9884 notas (70.8%) - Tempo decorrido: 0.1s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,957 - INFO - Processadas 7500 de 9884 notas (75.9%) - Tempo decorrido: 0.1s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,961 - INFO - Processadas 8000 de 9884 notas (80.9%) - Tempo decorrido: 0.1s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,970 - INFO - Processadas 8500 de 9884 notas (86.0%) - Tempo decorrido: 0.1s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,974 - INFO - Processadas 9000 de 9884 notas (91.1%) - Tempo decorrido: 0.1s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,977 - INFO - Processadas 9500 de 9884 notas (96.1%) - Tempo decorrido: 0.1s - Tempo restante estimado: 0 segundos
+2025-06-05 12:09:22,980 - INFO - Processamento concluído. 9884 notas processadas em 0.1 segundos
+2025-06-05 12:09:23,224 - INFO - Arquivo existente, criando novo arquivo: Notas_Processadas\NotasFiscais_20250605_120923.xlsx
+2025-06-05 12:09:25,659 - INFO - Arquivo Excel salvo com sucesso: Notas_Processadas\NotasFiscais_20250605_120923.xlsx
+2025-06-05 12:09:29,812 - INFO - Formatação adicional aplicada com sucesso
+2025-06-05 12:09:29,812 - INFO - Arquivo Excel gerado com sucesso: Notas_Processadas\NotasFiscais_20250605_120923.xlsx
