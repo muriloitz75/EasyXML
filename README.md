@@ -37,4 +37,4 @@ Este projeto permite extrair informações de notas fiscais eletrônicas (NF-e) 
 - pandas para manipulação de dados
 - openpyxl para salvar arquivos Excel
 
-## 👨‍💻 Criado por CaioXyZ
+## 👨‍💻 Criado por Murilo Miguel
