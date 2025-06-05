@@ -483,6 +483,19 @@ def extrair_dados(nota_xml, dados_coletados):
             cliente = detalhes_nf.get("dest", {}).get("xNome", "Não informado")
             endereco_cliente = detalhes_nf.get("dest", {}).get("enderDest", "Endereço não informado")
 
+            # Extrai informações de município e UF do emissor
+            municipio_prestador = "Não informado"
+            uf_prestador = "Não informado"
+            
+            # Tenta extrair município e UF do emissor
+            if 'emit' in detalhes_nf and 'enderEmit' in detalhes_nf['emit']:
+                endereco_emit = detalhes_nf['emit']['enderEmit']
+                municipio_prestador = endereco_emit.get("xMun", endereco_emit.get("cMun", "Não informado"))
+                uf_prestador = endereco_emit.get("UF", "Não informado")
+                logging.debug(f"Município e UF do emissor extraídos: {municipio_prestador}, {uf_prestador}")
+            else:
+                logging.warning(f"Não foi possível extrair município e UF do emissor para {nota_xml}")
+
             # Usa get() para evitar KeyError
             transp = detalhes_nf.get("transp", {})
             vol = transp.get("vol", {})
@@ -492,8 +505,37 @@ def extrair_dados(nota_xml, dados_coletados):
             else:
                 peso_total = vol.get("pesoB", "Não informado")
 
-            dados_coletados.append([numero, empresa, cliente, endereco_cliente, peso_total])
-            logging.info(f"Arquivo {nota_xml} processado com sucesso")
+            # Adiciona os dados coletados com município e UF
+            # Cria uma lista com os mesmos campos usados para NFSe
+            dados_nfe = [
+                numero,                  # Número NF
+                "Não informado",         # Data Emissão
+                "Não informado",         # Competência
+                "Não informado",         # Código Verificação
+                empresa,                 # Prestador
+                "Não informado",         # CNPJ Prestador
+                "Não informado",         # Inscrição Municipal Prestador
+                cliente,                 # Tomador
+                "Não informado",         # CNPJ/CPF Tomador
+                "0,00",                  # Valor Serviços
+                "0,00",                  # Base de Cálculo
+                "0,00",                  # Alíquota (%)
+                "0,00",                  # Valor ISS
+                "0,00",                  # Valor Líquido
+                "Não",                   # ISS Retido
+                "Não informado",         # Item Lista Serviço
+                "Não informado",         # Código CNAE
+                "Não informado",         # Código Tributação Municipal
+                "Não informado",         # Descrição Serviço
+                municipio_prestador,     # Município Prestador
+                uf_prestador,            # UF Prestador
+                "Não informado",         # Município Incidência
+                "Não",                   # Optante Simples Nacional
+                "Não"                    # Incentivo Fiscal
+            ]
+            
+            dados_coletados.append(dados_nfe)
+            logging.info(f"Arquivo {nota_xml} processado com sucesso com dados geográficos")
 
     except Exception as e:
         logging.error(f"Erro ao processar o arquivo {nota_xml}: {str(e)}")
@@ -538,12 +580,15 @@ def main():
         "Código CNAE",
         "Código Tributação Municipal",
         "Descrição Serviço",
-        "Município Prestador",
-        "UF Prestador",
+        "Município Prestador",  # Coluna para município
+        "UF Prestador",         # Coluna para UF
         "Município Incidência",
         "Optante Simples Nacional",
         "Incentivo Fiscal"
     ]
+    
+    # Log para debug das colunas
+    logging.debug(f"Colunas da tabela: {colunas_tabela}")
     dados_extraidos = []
 
     arquivos_processados = 0
@@ -999,7 +1044,11 @@ def main():
                         qtd_servico_mais_comum = 0
 
                     # Calcula indicadores geográficos
-                    if "Município" in df_notas.columns:
+                    if "Município Prestador" in df_notas.columns:
+                        # Renomeia a coluna para compatibilidade com o código existente
+                        df_notas["Município"] = df_notas["Município Prestador"]
+                        df_temp["Município"] = df_temp["Município Prestador"]
+                        logging.debug(f"Coluna 'Município Prestador' renomeada para 'Município' para cálculos")
                         # Distribuição por município
                         municipios = df_notas.groupby("Município").size().sort_values(ascending=False)
 
@@ -1066,7 +1115,11 @@ def main():
                         top5_municipios_valor_valores = [0] * 5
                         concentracao_top5_municipios = 0
 
-                    if "UF" in df_notas.columns:
+                    if "UF Prestador" in df_notas.columns:
+                        # Renomeia a coluna para compatibilidade com o código existente
+                        df_notas["UF"] = df_notas["UF Prestador"]
+                        df_temp["UF"] = df_temp["UF Prestador"]
+                        logging.debug(f"Coluna 'UF Prestador' renomeada para 'UF' para cálculos")
                         # Distribuição por UF
                         ufs = df_notas.groupby("UF").size().sort_values(ascending=False)
 
@@ -1610,9 +1663,11 @@ def main():
                     current_row = adicionar_cabecalhos(ws_indicadores, current_row)
 
                     # Calcula o município com maior valor
-                    if "Município" in df_notas.columns and "Base de Cálculo" in df_temp.columns:
+                    if ("Município" in df_notas.columns or "Município Prestador" in df_notas.columns) and "Base de Cálculo" in df_temp.columns:
+                        # Garante que estamos usando a coluna correta
+                        municipio_col = "Município" if "Município" in df_notas.columns else "Município Prestador"
                         df_mun_valor = pd.DataFrame({
-                            'Município': df_notas['Município'],
+                            'Município': df_notas[municipio_col],
                             'Base de Cálculo': df_temp['Base de Cálculo']
                         })
 
@@ -1633,9 +1688,11 @@ def main():
                         percentual_municipio_maior = 0
 
                     # Calcula a UF com maior valor
-                    if "UF" in df_notas.columns and "Base de Cálculo" in df_temp.columns:
+                    if ("UF" in df_notas.columns or "UF Prestador" in df_notas.columns) and "Base de Cálculo" in df_temp.columns:
+                        # Garante que estamos usando a coluna correta
+                        uf_col = "UF" if "UF" in df_notas.columns else "UF Prestador"
                         df_uf_valor = pd.DataFrame({
-                            'UF': df_notas['UF'],
+                            'UF': df_notas[uf_col],
                             'Base de Cálculo': df_temp['Base de Cálculo']
                         })
 
@@ -1672,7 +1729,9 @@ def main():
                         current_row = adicionar_indicador(ws_indicadores, current_row, indicador, valor, obs, i)
 
                     # Adiciona os top 5 municípios por quantidade
-                    if "Município" in df_notas.columns:
+                    if "Município" in df_notas.columns or "Município Prestador" in df_notas.columns:
+                        # Garante que estamos usando a coluna correta
+                        municipio_col = "Município" if "Município" in df_notas.columns else "Município Prestador"
                         # Adiciona subtítulo para os top 5 municípios
                         current_row += 1
                         ws_indicadores.cell(row=current_row, column=1).value = "Top 5 Municípios por Quantidade de Notas"
@@ -1694,7 +1753,7 @@ def main():
                         current_row += 1
 
                         # Adiciona os top 5 municípios
-                        municipios = df_notas.groupby("Município").size().sort_values(ascending=False)
+                        municipios = df_notas.groupby(municipio_col).size().sort_values(ascending=False)
                         top5_municipios = municipios.head(5)
 
                         for i, (municipio, qtd) in enumerate(top5_municipios.items()):
@@ -1776,7 +1835,9 @@ def main():
                                 current_row += 1
 
                     # 6.2 Distribuição por UF
-                    if "UF" in df_notas.columns:
+                    if "UF" in df_notas.columns or "UF Prestador" in df_notas.columns:
+                        # Garante que estamos usando a coluna correta
+                        uf_col = "UF" if "UF" in df_notas.columns else "UF Prestador"
                         # Adiciona subtítulo para a seção
                         current_row += 1
                         current_row = adicionar_titulo_secao(ws_indicadores, current_row, "6.2 Distribuição por UF")
@@ -1802,7 +1863,7 @@ def main():
                         current_row += 1
 
                         # Adiciona as UFs por quantidade
-                        ufs = df_notas.groupby("UF").size().sort_values(ascending=False)
+                        ufs = df_notas.groupby(uf_col).size().sort_values(ascending=False)
 
                         for i, (uf, qtd) in enumerate(ufs.items()):
                             percentual = (qtd / total_notas) * 100 if total_notas > 0 else 0
@@ -1851,7 +1912,7 @@ def main():
 
                             # Cria DataFrame para UF e valor
                             df_uf_valor = pd.DataFrame({
-                                'UF': df_notas['UF'],
+                                'UF': df_notas[uf_col],
                                 'Base de Cálculo': df_temp['Base de Cálculo']
                             })
 

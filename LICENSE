@@ -1,96 +1,9 @@
 Licença MIT
-
 Copyright (c) 2025 Murilo Miguel
 
 É concedida permissão, gratuitamente, a qualquer pessoa que obtenha uma cópia
-deste software e dos arquivos de documentação associados (o "Software"), para lidar
-com o Software sem restrição, incluindo, sem limitação, os direitos de usar, copiar,
-modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do Software,
-e de permitir que as pessoas a quem o Software seja fornecido o façam, sujeitos às seguintes condições:
+deste software e dos arquivos de documentação associados (o "Software"), para lidar com o Software sem restrição, incluindo, sem limitação, os direitos de usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do Software, e de permitir que as pessoas a quem o Software seja fornecido o façam, sujeitos às seguintes condições:
 
-A notificação de copyright e 
-esta permissão devem ser incluídas em todas as cópias ou partes substanciais do Software.
+A notificação de copyright e esta permissão devem ser incluídas em todas as cópias ou partes substanciais do Software.
 
-O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU
-IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO,
-ADEQUAÇÃO A UM DETERMINADO FIM E NÃO-VIOLAÇÃO. EM NENHUMA HIPÓTESE OS
-AUTORES OU DETENTORES DOS DIREITOS AUTORAIS SERÃO RESPONSABILIZADOS POR QUALQUER REIVINDICAÇÃO, DANOS OU OUTRA
-RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, DELITO OU DE OUTRA FORMA, ORIGINADAS, EM CONEXÃO COM O
-SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
-``` 
-
-Para efetivar a alteração no repositório, siga estes passos no terminal:
-
-1. **Verifique as alterações:**
-   
-   ```bash
-   git status
-   ```
-
-2. **Adicione o novo arquivo LICENSE:**
-
-   ```bash
-   git add LICENSE
-   ```
-
-3. **Realize o commit com uma mensagem descritiva:**
-
-   ```bash
-   git commit -m "Atualiza LICENSE com tradução para PT-BR"
-   ```
-
-4. **Envie para o repositório remoto:**
-
-   ```bash
-   git push origin main
-   ```
-
-Substitua "main" pelo nome da branch, se necessário.<!-- filepath: c:\Users\muril\Desktop\EasyXML\LICENSE -->
-Licença MIT
-
-Copyright (c) 2025 Murilo Miguel
-
-É concedida permissão, gratuitamente, a qualquer pessoa que obtenha uma cópia
-deste software e dos arquivos de documentação associados (o "Software"), para lidar
-com o Software sem restrição, incluindo, sem limitação, os direitos de usar, copiar,
-modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do Software,
-e de permitir que as pessoas a quem o Software seja fornecido o façam, sujeitos às seguintes condições:
-
-A notificação de copyright e 
-esta permissão devem ser incluídas em todas as cópias ou partes substanciais do Software.
-
-O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU
-IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO,
-ADEQUAÇÃO A UM DETERMINADO FIM E NÃO-VIOLAÇÃO. EM NENHUMA HIPÓTESE OS
-AUTORES OU DETENTORES DOS DIREITOS AUTORAIS SERÃO RESPONSABILIZADOS POR QUALQUER REIVINDICAÇÃO, DANOS OU OUTRA
-RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, DELITO OU DE OUTRA FORMA, ORIGINADAS, EM CONEXÃO COM O
-SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
-``` 
-
-Para efetivar a alteração no repositório, siga estes passos no terminal:
-
-1. **Verifique as alterações:**
-   
-   ```bash
-   git status
-   ```
-
-2. **Adicione o novo arquivo LICENSE:**
-
-   ```bash
-   git add LICENSE
-   ```
-
-3. **Realize o commit com uma mensagem descritiva:**
-
-   ```bash
-   git commit -m "Atualiza LICENSE com tradução para PT-BR"
-   ```
-
-4. **Envie para o repositório remoto:**
-
-   ```bash
-   git push origin main
-   ```
-
-Substitua "main" pelo nome da branch, se necessário.
+O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM DETERMINADO FIM E NÃO-VIOLAÇÃO. EM NENHUMA HIPÓTESE OSAUTORES OU DETENTORES DOS DIREITOS AUTORAIS SERÃO RESPONSABILIZADOS POR QUALQUER REIVINDICAÇÃO, DANOS OU OUTRA RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, DELITO OU DE OUTRA FORMA, ORIGINADAS, EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
