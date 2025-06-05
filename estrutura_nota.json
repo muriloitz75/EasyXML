@@ -1,0 +1,93 @@
+{
+  "@Id": "5794540",
+  "Numero": "202200000000001",
+  "CodigoVerificacao": "XF8D-WBFA",
+  "DataEmissao": "2022-01-03T13:10:08-03:00",
+  "ValoresNfse": {
+    "BaseCalculo": "44112.20",
+    "ValorIss": "1323.37",
+    "ValorLiquidoNfse": "44112.20"
+  },
+  "ValorCredito": "0.00",
+  "PrestadorServico": {
+    "IdentificacaoPrestador": {
+      "CpfCnpj": {
+        "Cnpj": "23430770000170"
+      },
+      "InscricaoMunicipal": "39430"
+    },
+    "RazaoSocial": "HOSPITAL SANTA MONICA LTDA",
+    "NomeFantasia": "HOSPITAL SANTA MONICA",
+    "Endereco": {
+      "Endereco": "RUA PIAUI",
+      "Numero": "772",
+      "Bairro": "CENTRO",
+      "CodigoMunicipio": "2105302",
+      "Uf": "MA",
+      "Cep": "65901600"
+    },
+    "Contato": {
+      "Telefone": "9935293200",
+      "Email": "OSANA@HSMONICA.COM"
+    }
+  },
+  "OrgaoGerador": {
+    "CodigoMunicipio": "2105302",
+    "Uf": "MA"
+  },
+  "DeclaracaoPrestacaoServico": {
+    "InfDeclaracaoPrestacaoServico": {
+      "@Id": "InfDec_19336239",
+      "Competencia": "2022-01-01",
+      "Servico": {
+        "Valores": {
+          "ValorServicos": "44112.20",
+          "ValorDeducoes": "0.00",
+          "ValorPis": "0.00",
+          "ValorCofins": "0.00",
+          "ValorInss": "0.00",
+          "ValorIr": "0.00",
+          "ValorCsll": "0.00",
+          "OutrasRetencoes": "0.00",
+          "ValorIss": "1323.37",
+          "Aliquota": "3.00",
+          "DescontoIncondicionado": "0.00",
+          "DescontoCondicionado": "0.00"
+        },
+        "IssRetido": "2",
+        "ItemListaServico": "0403",
+        "CodigoCnae": "8610102",
+        "CodigoTributacaoMunicipio": "8610102",
+        "Discriminacao": "SERVICOS HOSPITALARES PRESTADOS AOS USUARIOS E DEPENDENTES DO CONVENIO SEPACO- COMP. 01/2022-\n\nPROTOCOLO 30677927\nPROTOCOLO 30677742\nPROTOCOLO 30685638\nPROTOCOLO 30685688\nPROTOCOLO 30654431\nPROTOCOLO 30651305\nPROTOCOLO 30647433\nPROTOCOLO 30641295\nPROTOCOLO 30641212\nPROTOCOLO 30622304\nPROTOCOLO 30620674\nPROTOCOLO 30612709",
+        "CodigoMunicipio": "2105302",
+        "ExigibilidadeISS": "1",
+        "MunicipioIncidencia": "2105302"
+      },
+      "Prestador": {
+        "CpfCnpj": {
+          "Cnpj": "23430770000170"
+        },
+        "InscricaoMunicipal": "39430"
+      },
+      "Tomador": {
+        "IdentificacaoTomador": {
+          "CpfCnpj": {
+            "Cnpj": "60961422000155"
+          },
+          "InscricaoMunicipal": null
+        },
+        "RazaoSocial": "SERVICO SOCIAL DA INDUSTRIA DE PAPEL- PAPEL E CORTICA DO ESTADO DE SAO PAULO- SEPACO",
+        "Endereco": {
+          "Endereco": "RUA VERGUEIRO",
+          "Numero": "4210",
+          "Bairro": "VILA MARIANA",
+          "CodigoMunicipio": "3550308",
+          "Uf": "SP",
+          "Cep": "04102900"
+        }
+      },
+      "OptanteSimplesNacional": "0",
+      "IncentivoFiscal": "2"
+    }
+  }
+}

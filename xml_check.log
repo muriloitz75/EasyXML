@@ -1,0 +1,11 @@
+2025-04-28 11:33:54,518 - INFO - Analisando estrutura do arquivo: nfs\102505_01012022_31032025.XML
+2025-04-28 11:33:54,518 - INFO - Arquivo aberto, iniciando parse XML
+2025-04-28 11:33:57,005 - INFO - Parse XML concluído
+2025-04-28 11:33:57,006 - INFO - Chaves de primeiro nível: ['ConsultarNfseServicoPrestadoResposta']
+2025-04-28 11:33:57,006 - INFO - Estrutura identificada: ConsultarNfseServicoPrestadoResposta
+2025-04-28 11:33:57,006 - INFO - Contém ListaNfse
+2025-04-28 11:33:57,007 - INFO - CompNfse é uma lista com 9884 itens
+2025-04-28 11:33:57,007 - INFO - Primeiro item contém Nfse
+2025-04-28 11:33:57,007 - INFO - Primeiro item contém InfNfse
+2025-04-28 11:33:57,007 - INFO - Número da primeira nota: 202200000000001
+2025-04-28 11:33:57,008 - INFO - Razão social do prestador: HOSPITAL SANTA MONICA LTDA

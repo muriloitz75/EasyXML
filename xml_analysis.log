@@ -1,0 +1,47 @@
+2025-04-28 11:37:48,372 - INFO - Analisando estrutura do arquivo: nfs\102505_01012022_31032025.XML
+2025-04-28 11:37:48,372 - INFO - Arquivo aberto, iniciando parse XML
+2025-04-28 11:37:51,122 - INFO - Parse XML concluído
+2025-04-28 11:37:51,123 - INFO - Estrutura identificada: ConsultarNfseServicoPrestadoResposta
+2025-04-28 11:37:51,123 - INFO - Campos disponíveis na nota:
+2025-04-28 11:37:51,124 - INFO - - @Id
+2025-04-28 11:37:51,124 - INFO - - Numero
+2025-04-28 11:37:51,124 - INFO - - CodigoVerificacao
+2025-04-28 11:37:51,125 - INFO - - DataEmissao
+2025-04-28 11:37:51,125 - INFO - - ValoresNfse
+2025-04-28 11:37:51,126 - INFO - - ValorCredito
+2025-04-28 11:37:51,126 - INFO - - PrestadorServico
+2025-04-28 11:37:51,126 - INFO - - OrgaoGerador
+2025-04-28 11:37:51,126 - INFO - - DeclaracaoPrestacaoServico
+2025-04-28 11:37:51,127 - INFO - Campos em ValoresNfse:
+2025-04-28 11:37:51,127 - INFO -   - BaseCalculo
+2025-04-28 11:37:51,127 - INFO -   - ValorIss
+2025-04-28 11:37:51,127 - INFO -   - ValorLiquidoNfse
+2025-04-28 11:37:51,127 - INFO - Campos em PrestadorServico:
+2025-04-28 11:37:51,128 - INFO -   - IdentificacaoPrestador
+2025-04-28 11:37:51,128 - INFO -   - RazaoSocial
+2025-04-28 11:37:51,128 - INFO -   - NomeFantasia
+2025-04-28 11:37:51,128 - INFO -   - Endereco
+2025-04-28 11:37:51,128 - INFO -   - Contato
+2025-04-28 11:37:51,129 - INFO - Campos em InfDeclaracaoPrestacaoServico:
+2025-04-28 11:37:51,129 - INFO -   - @Id
+2025-04-28 11:37:51,129 - INFO -   - Competencia
+2025-04-28 11:37:51,129 - INFO -   - Servico
+2025-04-28 11:37:51,129 - INFO -   - Prestador
+2025-04-28 11:37:51,130 - INFO -   - Tomador
+2025-04-28 11:37:51,130 - INFO -   - OptanteSimplesNacional
+2025-04-28 11:37:51,130 - INFO -   - IncentivoFiscal
+2025-04-28 11:37:51,130 - INFO - Campos em Servico:
+2025-04-28 11:37:51,130 - INFO -     - Valores
+2025-04-28 11:37:51,131 - INFO -     - IssRetido
+2025-04-28 11:37:51,131 - INFO -     - ItemListaServico
+2025-04-28 11:37:51,131 - INFO -     - CodigoCnae
+2025-04-28 11:37:51,131 - INFO -     - CodigoTributacaoMunicipio
+2025-04-28 11:37:51,132 - INFO -     - Discriminacao
+2025-04-28 11:37:51,132 - INFO -     - CodigoMunicipio
+2025-04-28 11:37:51,132 - INFO -     - ExigibilidadeISS
+2025-04-28 11:37:51,132 - INFO -     - MunicipioIncidencia
+2025-04-28 11:37:51,132 - INFO - Campos em Tomador:
+2025-04-28 11:37:51,133 - INFO -     - IdentificacaoTomador
+2025-04-28 11:37:51,133 - INFO -     - RazaoSocial
+2025-04-28 11:37:51,133 - INFO -     - Endereco
+2025-04-28 11:37:51,135 - INFO - Estrutura da nota salva em 'estrutura_nota.json'

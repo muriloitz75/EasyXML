@@ -1,0 +1,45 @@
+2025-04-28 11:47:22,348 - INFO - Analisando estrutura detalhada do arquivo: nfs\102505_01012022_31032025.XML
+2025-04-28 11:47:22,348 - INFO - Arquivo aberto, iniciando parse XML
+2025-04-28 11:47:24,827 - INFO - Parse XML concluído
+2025-04-28 11:47:24,827 - INFO - Estrutura identificada: ConsultarNfseServicoPrestadoResposta
+2025-04-28 11:47:24,827 - INFO - Campos detalhados em Servico:
+2025-04-28 11:47:24,828 - INFO -   - Valores:
+2025-04-28 11:47:24,828 - INFO -     - ValorServicos: 44112.20
+2025-04-28 11:47:24,828 - INFO -     - ValorDeducoes: 0.00
+2025-04-28 11:47:24,828 - INFO -     - ValorPis: 0.00
+2025-04-28 11:47:24,829 - INFO -     - ValorCofins: 0.00
+2025-04-28 11:47:24,830 - INFO -     - ValorInss: 0.00
+2025-04-28 11:47:24,830 - INFO -     - ValorIr: 0.00
+2025-04-28 11:47:24,830 - INFO -     - ValorCsll: 0.00
+2025-04-28 11:47:24,830 - INFO -     - OutrasRetencoes: 0.00
+2025-04-28 11:47:24,830 - INFO -     - ValorIss: 1323.37
+2025-04-28 11:47:24,831 - INFO -     - Aliquota: 3.00
+2025-04-28 11:47:24,831 - INFO -     - DescontoIncondicionado: 0.00
+2025-04-28 11:47:24,831 - INFO -     - DescontoCondicionado: 0.00
+2025-04-28 11:47:24,831 - INFO -   - IssRetido: 2
+2025-04-28 11:47:24,832 - INFO -   - ItemListaServico: 0403
+2025-04-28 11:47:24,832 - INFO -   - CodigoCnae: 8610102
+2025-04-28 11:47:24,833 - INFO -   - CodigoTributacaoMunicipio: 8610102
+2025-04-28 11:47:24,833 - INFO -   - Discriminacao: SERVICOS HOSPITALARES PRESTADOS AOS USUARIOS E DEPENDENTES DO CONVENIO SEPACO- COMP. 01/2022-
+
+PROTOCOLO 30677927
+PROTOCOLO 30677742
+PROTOCOLO 30685638
+PROTOCOLO 30685688
+PROTOCOLO 30654431
+PROTOCOLO 30651305
+PROTOCOLO 30647433
+PROTOCOLO 30641295
+PROTOCOLO 30641212
+PROTOCOLO 30622304
+PROTOCOLO 30620674
+PROTOCOLO 30612709
+2025-04-28 11:47:24,834 - INFO -   - CodigoMunicipio: 2105302
+2025-04-28 11:47:24,834 - INFO -   - ExigibilidadeISS: 1
+2025-04-28 11:47:24,834 - INFO -   - MunicipioIncidencia: 2105302
+2025-04-28 11:47:24,835 - INFO - Não foram encontrados itens de serviço detalhados
+2025-04-28 11:47:24,835 - INFO - Códigos de serviço encontrados:
+2025-04-28 11:47:24,835 - INFO -   - ItemListaServico: 0403
+2025-04-28 11:47:24,835 - INFO -   - CodigoCnae: 8610102
+2025-04-28 11:47:24,836 - INFO -   - CodigoTributacaoMunicipio: 8610102
+2025-04-28 11:47:24,837 - INFO - Estrutura detalhada da nota salva em 'estrutura_nota_detalhada.json'
